@@ -4,36 +4,28 @@ import java.util.Objects;
 
 public class User {
 
-    private int id;
-    private final String username;
-    private final String password;
-    private String email;
-    private String pictureURL;
+    private final String name;
+    private final String surname;
+    private final String email;
+    private final String pictureURL;
+    private final int age;
+    private final int password;
 
-
-    public User(int id, String username, String password, String email, String pictureURL) {
-        this.id = id;
+    public User(String name, String surname, String email, String pictureURL, int age, int password) {
+        this.name = name;
+        this.surname = surname;
         this.email = email;
         this.pictureURL = pictureURL;
-        this.username = username;
+        this.age = age;
         this.password = password;
     }
 
-    public User(String username, String password) {
-        this.username = username;
-        this.password = password;
+    public String getName() {
+        return name;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public String getPassword() {
-        return password;
+    public String getSurname() {
+        return surname;
     }
 
     public String getEmail() {
@@ -44,25 +36,35 @@ public class User {
         return pictureURL;
     }
 
+    public int getAge() {
+        return age;
+    }
+
+    public int getPassword() {
+        return password;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof User user)) return false;
-        return getId() == user.getId() && getUsername().equals(user.getUsername()) && getPassword().equals(user.getPassword()) && getEmail().equals(user.getEmail()) && getPictureURL().equals(user.getPictureURL());
+        return getAge() == user.getAge() && getPassword() == user.getPassword() && getName().equals(user.getName()) && getSurname().equals(user.getSurname()) && getEmail().equals(user.getEmail()) && getPictureURL().equals(user.getPictureURL());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getUsername(), getPassword(), getEmail(), getPictureURL());
+        return Objects.hash(getName(), getSurname(), getEmail(), getPictureURL(), getAge(), getPassword());
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
                 ", email='" + email + '\'' +
                 ", pictureURL='" + pictureURL + '\'' +
+                ", age=" + age +
                 '}';
     }
+
 }
