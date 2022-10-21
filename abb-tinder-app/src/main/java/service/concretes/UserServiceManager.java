@@ -30,7 +30,7 @@ public class UserServiceManager implements UserService {
     }
 
     @Override
-    public void insertUser(String name, String surname, String email, String pictureURL, int age, int password) {
+    public void insertUser(String name, String surname, String email, String pictureURL, int age, String password) {
         User user = new User(name, surname, email, pictureURL, age, password);
         userDAO.insertUser(user);
     }

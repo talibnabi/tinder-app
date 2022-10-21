@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register to MatchMe</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="/template/webfiles/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet"
+          type="text/css" href="/template/webfiles/css/style.css">
+</head>
+<body>
+
+<div class="main">
+
+    <section class="signup">
+        <!-- <img src="images/signup-bg.jpg" alt=""> -->
+        <div class="container">
+            <div class="signup-content">
+                <form method="post" id="signup-form" class="signup-form">
+                    <h2 class="form-title" style="color: white">Sign Up for MatchMe</h2>
+                    <div class="form-group">
+                        <input type="text" class="form-input" name="name" id="name" placeholder="First Name"
+                               maxlength="20" autocomplete="off" required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-input" name="surname" id="surname" placeholder="Last Name"
+                               maxlength="20" autocomplete="off" required/>
+                    </div>
+                    <!-- added age-->
+                    <div class="form-group">
+                        <input type="number" class="form-input" name="age" id="age" placeholder="Your Age"
+                               maxlength="20" autocomplete="off" required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-input" name="picUrl" id="picUrl" placeholder="add URL Photo"
+                               maxlength="100" autocomplete="off" required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" name="email" id="email" placeholder="Your Email"
+                               autocomplete="off" required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-input" name="password" id="password" placeholder="Password"
+                               minlength="5" maxlength="20" autocomplete="off" required/>
+                        <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-input" name="passwordrepeat" id="passwordrepeat"
+                               placeholder="Repeat your password" autocomplete="off" required/>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="submit" name="submit" id="submit" class="form-submit" value="Sign up"/>
+                    </div>
+                </form>
+                <p class="loginhere">
+                    Already have an account? <a href="./login" class="loginhere-link">Login here</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- JS -->
+<script src="/template/webfiles/vendor/jquery/jquery.min.js"></script>
+<script src="/template/webfiles/js/main.js"></script>
+</body>
+</html>

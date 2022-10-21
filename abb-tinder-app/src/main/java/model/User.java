@@ -9,9 +9,9 @@ public class User {
     private final String email;
     private final String pictureURL;
     private final int age;
-    private final int password;
+    private final String password;
 
-    public User(String name, String surname, String email, String pictureURL, int age, int password) {
+    public User(String name, String surname, String email, String pictureURL, int age, String password) {
         this.name = name;
         this.surname = surname;
         this.email = email;
@@ -40,15 +40,16 @@ public class User {
         return age;
     }
 
-    public int getPassword() {
+    public String getPassword() {
         return password;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof User user)) return false;
-        return getAge() == user.getAge() && getPassword() == user.getPassword() && getName().equals(user.getName()) && getSurname().equals(user.getSurname()) && getEmail().equals(user.getEmail()) && getPictureURL().equals(user.getPictureURL());
+        if (!(o instanceof User)) return false;
+        User user = (User) o;
+        return getAge() == user.getAge() && getName().equals(user.getName()) && getSurname().equals(user.getSurname()) && getEmail().equals(user.getEmail()) && getPictureURL().equals(user.getPictureURL()) && getPassword().equals(user.getPassword());
     }
 
     @Override

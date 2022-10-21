@@ -24,7 +24,7 @@ public class UserDAOManager implements UserDAO {
             ps.setString(3, user.getEmail());
             ps.setString(4, user.getPictureURL());
             ps.setInt(5, user.getAge());
-            ps.setInt(6, user.getPassword());
+            ps.setString(6, user.getPassword());
             ps.execute();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -41,14 +41,14 @@ public class UserDAOManager implements UserDAO {
         String surname = "";
         String pictureURL = "";
         int age = 0;
-        int password = 0;
+        String password = "";
         while (resultSet.next()) {
             name = resultSet.getString("name");
             surname = resultSet.getString("surname");
             email = resultSet.getString("email");
             pictureURL = resultSet.getString("picture_url");
             age = resultSet.getInt("age");
-            password = resultSet.getInt("password");
+            password = resultSet.getString("password");
 
         }
         return new User(name, surname, email, pictureURL, age, password);
@@ -67,7 +67,7 @@ public class UserDAOManager implements UserDAO {
                     resultSet.getString("email"),
                     resultSet.getString("picture_url"),
                     resultSet.getInt("age"),
-                    resultSet.getInt("password")
+                    resultSet.getString("password")
             ));
         }
         return userList;
