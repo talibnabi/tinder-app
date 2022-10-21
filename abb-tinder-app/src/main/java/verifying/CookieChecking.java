@@ -1,8 +1,8 @@
-package util.checking;
+package verifying;
 
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.http.HttpServletRequest;
-import util.cookies.Cookies;
+import cookies.Cookies;
 
 public class CookieChecking {
 

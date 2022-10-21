@@ -1,4 +1,4 @@
-package util.checking;
+package verifying;
 
 public class LoginChecking {
 }

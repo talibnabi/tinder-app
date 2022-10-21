@@ -1,4 +1,4 @@
-package util.db;
+package util;
 
 import service.concretes.UserServiceManager;
 

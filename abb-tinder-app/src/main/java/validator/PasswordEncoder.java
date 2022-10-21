@@ -1,4 +1,4 @@
-package util.encoding;
+package validator;
 
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;

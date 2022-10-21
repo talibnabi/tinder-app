@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static util.db.DBOperations.connection;
+import static util.DBOperations.connection;
 
 public class UserDAOManager implements UserDAO {
 
