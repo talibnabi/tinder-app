@@ -9,4 +9,5 @@ public interface UserService {
 
     List<User> getAllUser();
 
+    void insertUser(String name, String surname, String email, String pictureURL, int age, int password);
 }
