@@ -64,10 +64,10 @@ public class UserDAORepository implements UserDAO {
         List<User> userList = new ArrayList<>();
         while (resultSet.next()) {
             userList.add(new User(
-                    resultSet.getString("email"),
                     resultSet.getString("name"),
                     resultSet.getString("surname"),
-                    resultSet.getString("picUrl"),
+                    resultSet.getString("email"),
+                    resultSet.getString("picture_url"),
                     resultSet.getInt("age"),
                     resultSet.getInt("password")
             ));
