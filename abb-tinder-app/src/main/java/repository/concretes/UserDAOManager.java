@@ -1,19 +1,17 @@
-package repository.daorepo;
+package repository.concretes;
 
 import model.User;
-import repository.dao.UserDAO;
+import repository.abstracts.UserDAO;
 
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static db.ConnectionToDB.getConnection;
+import static util.DBConnection.connection;
 
-public class UserDAORepository implements UserDAO {
-    private final Connection connection = getConnection();
+public class UserDAOManager implements UserDAO {
 
     @Override
     public void insertUser(User user) {

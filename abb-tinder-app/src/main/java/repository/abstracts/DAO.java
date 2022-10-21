@@ -1,4 +1,4 @@
-package repository.dao;
+package repository.abstracts;
 
 public interface DAO<T> {
 
