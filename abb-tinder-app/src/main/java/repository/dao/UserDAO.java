@@ -7,5 +7,5 @@ import java.util.List;
 public interface UserDAO extends DAO<User> {
     List<User> getAllUser();
 
-    User getUser(int id);
+    User getUserById(int id);
 }

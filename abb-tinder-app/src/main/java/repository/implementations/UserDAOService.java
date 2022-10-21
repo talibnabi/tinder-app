@@ -12,7 +12,7 @@ public class UserDAOService implements UserDAO {
     }
 
     @Override
-    public User getUser(int id) {
+    public User getUserById(int id) {
         return null;
     }
 }
