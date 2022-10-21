@@ -1,4 +1,4 @@
-package repository.implementations;
+package repository.daoservices;
 
 import model.User;
 import repository.dao.UserLoginDAO;

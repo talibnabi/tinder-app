@@ -1,4 +1,4 @@
-package repository.implementations;
+package repository.daoservices;
 
 import jakarta.servlet.http.HttpServletRequest;
 import repository.dao.UserLogoutDAO;
