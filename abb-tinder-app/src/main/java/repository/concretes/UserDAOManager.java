@@ -74,18 +74,18 @@ public class UserDAOManager implements UserDAO {
     }
 
     @Override
-    public int findIdByName(String name) {
+    public int findIdByEmail(String email) {
         PreparedStatement ps;
         try {
             final String query = "select * from users";
             ps = connection.prepareStatement(query);
             ResultSet resultSet = ps.executeQuery();
-            String nameX;
+            String emailX;
             int id;
             while (resultSet.next()) {
                 id = resultSet.getInt("id");
-                nameX = resultSet.getString("email");
-                if (nameX.equalsIgnoreCase(name)) {
+                emailX = resultSet.getString("email");
+                if (email.equalsIgnoreCase(email)) {
                     return id;
                 }
             }

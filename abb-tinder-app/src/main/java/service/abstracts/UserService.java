@@ -10,5 +10,6 @@ public interface UserService {
     List<User> getAllUser();
 
     void insertUser(String name, String surname, String email, String pictureURL, int age, int password);
-    int findUserIdByName(String name);
+
+    int findUserIdByEmail(String email);
 }

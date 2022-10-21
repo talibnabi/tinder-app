@@ -36,7 +36,7 @@ public class UserServiceManager implements UserService {
     }
 
     @Override
-    public int findUserIdByName(String name) {
-        return userDAO.findIdByName(name);
+    public int findUserIdByEmail(String email) {
+        return userDAO.findIdByEmail(email);
     }
 }

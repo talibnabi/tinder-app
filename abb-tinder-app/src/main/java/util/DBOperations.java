@@ -9,7 +9,7 @@ import static db.ConnectionToDB.getConnection;
 public class DBOperations {
     public static final Connection connection = getConnection();
 
-    public static int getUserIdByNameFromDB(String name, UserServiceManager userServiceManager) {
-        return userServiceManager.findUserIdByName(name);
+    public static int getUserIdByEmailFromDB(String email, UserServiceManager userServiceManager) {
+        return userServiceManager.findUserIdByEmail(email);
     }
 }

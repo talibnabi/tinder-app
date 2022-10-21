@@ -11,5 +11,5 @@ public interface UserDAO extends DAO<User> {
     User getUserByID(int userID) throws SQLException;
 
     List<User> getAllUser() throws SQLException;
-    int findIdByName(String name);
+    int findIdByEmail(String email);
 }
