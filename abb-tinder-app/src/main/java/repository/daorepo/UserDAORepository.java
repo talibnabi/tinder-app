@@ -17,7 +17,7 @@ public class UserDAORepository implements UserDAO {
 
     @Override
     public void insertUser(User user) {
-        final String query = "INSERT INTO users ( name, surname,email, picture_url, age, password) VALUES (?,?,?,?,?,?)";
+        final String query = "insert into users ( name, surname,email, picture_url, age, password) values (?,?,?,?,?,?)";
         PreparedStatement ps;
         try {
             ps = connection.prepareStatement(query);
