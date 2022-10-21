@@ -34,4 +34,9 @@ public class UserServiceManager implements UserService {
         User user = new User(name, surname, email, pictureURL, age, password);
         userDAO.insertUser(user);
     }
+
+    @Override
+    public int findUserIdByName(String name) {
+        return userDAO.findIdByName(name);
+    }
 }

@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static util.DBConnection.connection;
+import static util.DBUtil.connection;
 
 public class UserDAOManager implements UserDAO {
 
@@ -71,5 +71,27 @@ public class UserDAOManager implements UserDAO {
             ));
         }
         return userList;
+    }
+
+    @Override
+    public int findIdByName(String name) {
+        PreparedStatement ps;
+        try {
+            final String query = "select * from users";
+            ps = connection.prepareStatement(query);
+            ResultSet resultSet = ps.executeQuery();
+            String nameX;
+            int id;
+            while (resultSet.next()) {
+                id = resultSet.getInt("id");
+                nameX = resultSet.getString("email");
+                if (nameX.equalsIgnoreCase(name)) {
+                    return id;
+                }
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Something went wrong during find id by name", e);
+        }
+        return -1;
     }
 }
