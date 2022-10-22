@@ -32,7 +32,7 @@ public class UserRegisterServlet extends HttpServlet {
         String name = req.getParameter("name");
         String surname = req.getParameter("surname");
         String email = req.getParameter("email");
-        String pictureURL = req.getParameter("picture_url");
+        String pictureURL = req.getParameter("picUrl");
         String age = req.getParameter("age");
         String password = req.getParameter("password");
         UserServiceManager usersDaoService = new UserServiceManager();
