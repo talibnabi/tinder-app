@@ -4,14 +4,14 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class ConnectionToDB {
+public class ConnectionToDBLocal {
     private static final String DB_URL = "jdbc:postgresql://localhost:5432/tinderapp";
     private static final String USERNAME = "postgres";
     private static final String USER_PASS = "12345";
 
     private static Connection connection;
 
-    private ConnectionToDB() {
+    private ConnectionToDBLocal() {
     }
 
     public static Connection getConnection() {
