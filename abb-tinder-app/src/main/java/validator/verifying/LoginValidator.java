@@ -10,7 +10,7 @@ public class LoginValidator {
         String password = req.getParameter("password");
         UserServiceManager service = new UserServiceManager();
         if (email == null) {
-            return false;
+            return true;
         }
         if (service.getAllUser().stream().anyMatch(user -> user.getEmail().equals(email))) {
             return service.getAllUser().stream().filter(user -> user.getEmail().equals(email))

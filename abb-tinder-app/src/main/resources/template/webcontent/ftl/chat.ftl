@@ -2,13 +2,13 @@
 <html>
 <head>
     <title>Chat</title>
-    <link rel="stylesheet" href="/template/webfiles/chat_files/bootstrap.min.css">
-    <script src="/template/webfiles/chat_files/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/template/webfiles/chat_files/jquery.mCustomScrollbar.min.css">
-    <script type="text/javascript" src="/template/webfiles/chat_files/jquery.mCustomScrollbar.min.js"></script>
-    <link rel="stylesheet" href="/template/webfiles/chat_files/style.css">
-    <script type="text/javascript" src="/template/webfiles/chat_files/main.js"></script>
-    <link rel="stylesheet" href="/template/webfiles/chat_files/all.css">
+    <link rel="stylesheet" href="/template/webcontent/chat_files/bootstrap.min.css">
+    <script src="/template/webcontent/chat_files/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/template/webcontent/chat_files/jquery.mCustomScrollbar.min.css">
+    <script type="text/javascript" src="/template/webcontent/chat_files/jquery.mCustomScrollbar.min.js"></script>
+    <link rel="stylesheet" href="/template/webcontent/chat_files/style.css">
+    <script type="text/javascript" src="/template/webcontent/chat_files/main.js"></script>
+    <link rel="stylesheet" href="/template/webcontent/chat_files/all.css">
 
 </head>
 

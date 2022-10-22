@@ -7,6 +7,6 @@ public class UserValidator {
     public static boolean isUniqueUser(ServletRequest req) {
         String email = req.getParameter("email");
         UserServiceManager service = new UserServiceManager();
-        return service.getAllUser().stream().noneMatch(user -> user.getEmail().equalsIgnoreCase(email));
+        return service.getAllUser().stream().noneMatch(user -> user.getEmail().equals(email));
     }
 }

@@ -1,15 +1,14 @@
 package filters;
 
-
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-import static validator.verifying.LoginValidator.isLoginCorrect;
+import static validator.verifying.CookieValidator.checkCookies;
 
-public class UserLoginFilter implements Filter {
+public class CookiesFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
@@ -18,13 +17,14 @@ public class UserLoginFilter implements Filter {
         HttpServletResponse rs = (HttpServletResponse) response;
 
         if (req.getMethod().equalsIgnoreCase("GET")) {
-            chain.doFilter(request, response);
-        } else {
-            if (isLoginCorrect(request)) {
-                chain.doFilter(request, response);
+            if (checkCookies(request)) {
+                rs.sendRedirect("/login/");
             } else {
-                rs.sendRedirect("/login");
+                chain.doFilter(request, response);
             }
+        } else {
+            chain.doFilter(request, response);
         }
+
     }
 }
