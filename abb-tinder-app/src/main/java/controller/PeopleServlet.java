@@ -27,7 +27,7 @@ public class PeopleServlet extends HttpServlet {
         List<User> toLike = LikedUserFindManager.getLikedUser(id);
         HashMap<String, Object> data = new HashMap<>();
         data.put("likedPeople", toLike);
-        configurer.render("people-list.ftl", data, resp);
+        configurer.render("people.ftl", data, resp);
     }
 
     @Override

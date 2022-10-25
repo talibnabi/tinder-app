@@ -48,7 +48,7 @@
                             <tr>
                                 <td width="10">
                                     <div class="avatar-img">
-                                        <img class="img-circle" src=${person.picURL} />  
+                                        <img class="img-circle" src=${person.pictureURL} />  
                                     </div>
                                 </td>
                                 <td class="align-middle">
