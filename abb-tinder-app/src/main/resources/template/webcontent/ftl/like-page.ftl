@@ -4,13 +4,9 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" href="/template/webcontent/images/logo.png" type="image/png">
     <title>MatchMe Here</title>
 
-    <link rel="stylesheet" href="/template/webcontent/css/bootstrap.css">
     <link rel="stylesheet" href="/template/webcontent/vendors/linericon/style.css">
-    <link rel="stylesheet" href="/template/webcontent/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/template/webcontent/css/styler.css">
 
 </head>
 <body>

@@ -22,18 +22,12 @@ public class ApplicationStarter {
         webHandler.addServlet(new ServletHolder(new UserRegisterServlet()), "/register/*");
         webHandler.addServlet(new ServletHolder(new RedirectServlet("/login")), "/*");
         webHandler.addServlet(new ServletHolder(new PathServlet()), "/template/*");
-
-
         webHandler.addFilter(UserRegisterFilter.class, "/register/*", EnumSet.of(DispatcherType.REQUEST));
-//        webHandler.addFilter(CookiesFilter.class, "/login/*", EnumSet.of(DispatcherType.REQUEST));
-
         webHandler.addFilter(UserLoginFilter.class, "/login/*", EnumSet.of(DispatcherType.REQUEST));
         webHandler.addFilter(LoginFilterWithCookies.class, "/login/*", EnumSet.of(DispatcherType.REQUEST));
-
         webHandler.addFilter(CookiesFilter.class, "/like", EnumSet.of(DispatcherType.REQUEST));
         webHandler.addFilter(LikedFilter.class, "/like", EnumSet.of(DispatcherType.REQUEST));
         webHandler.addFilter(NonLikedFilter.class, "/like", EnumSet.of(DispatcherType.REQUEST));
-
         webHandler.addFilter(CookiesFilter.class, "/chat/*", EnumSet.of(DispatcherType.REQUEST));
         webHandler.addFilter(MessageFilter.class, "/chat/*", EnumSet.of(DispatcherType.REQUEST));
         webServer.setHandler(webHandler);
