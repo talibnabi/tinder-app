@@ -38,7 +38,7 @@ public class LikeServlet extends HttpServlet {
         User toLike = userServiceManager.getUserByID(likedPersonID);
         HashMap<String, Object> data = new HashMap<>();
         data.put("likedPeople", toLike);
-        configurer.render("like-page.ftl", data, response);
+        configurer.render("liked.ftl", data, response);
         userList.remove(0);
     }
 
