@@ -1,4 +1,4 @@
-package controller.user;
+package controller;
 
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;

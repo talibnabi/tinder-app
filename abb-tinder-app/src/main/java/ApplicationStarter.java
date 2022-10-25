@@ -1,6 +1,6 @@
-import controller.redirect.RedirectServlet;
-import controller.user.UserLoginServlet;
-import controller.user.UserRegisterServlet;
+import controller.RedirectServlet;
+import controller.UserLoginServlet;
+import controller.UserRegisterServlet;
 import filters.CookiesFilter;
 import filters.LoginFilterWithCookies;
 import filters.UserLoginFilter;
@@ -18,14 +18,14 @@ public class ApplicationStarter {
         Server webServer = new Server(8099);
         ServletContextHandler webHandler = new ServletContextHandler();
         FreemarkerTemplateConfigurer engine = new FreemarkerTemplateConfigurer("./src/main/resources/template/webcontent/ftl/");
+
         webHandler.addServlet(new ServletHolder(new UserRegisterServlet()), "/register/*");
         webHandler.addServlet(new ServletHolder(new UserLoginServlet()), "/login/*");
         webHandler.addServlet(new ServletHolder(new UserLoginServlet()), "/logout/*");
         webHandler.addServlet(new ServletHolder(new RedirectServlet("/login")), "/*");
 
         webHandler.addFilter(UserRegisterFilter.class, "/register/*", EnumSet.of(DispatcherType.REQUEST));
-        webHandler.addFilter(UserRegisterFilter.class, "/register/*", EnumSet.of(DispatcherType.REQUEST));
-        webHandler.addFilter(LoginFilterWithCookies.class, "/login/*", EnumSet.of(DispatcherType.REQUEST));
+//        webHandler.addFilter(LoginFilterWithCookies.class, "/login/*", EnumSet.of(DispatcherType.REQUEST));
         webHandler.addFilter(UserLoginFilter.class, "/login/*", EnumSet.of(DispatcherType.REQUEST));
         webHandler.addFilter(CookiesFilter.class, "/login/*", EnumSet.of(DispatcherType.REQUEST));
         webServer.setHandler(webHandler);

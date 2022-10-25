@@ -9,16 +9,16 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static util.DBOperations.connection;
+import static constants.daoConstants.UserDAOManagerQueries.*;
+import static util.DBOperation.connection;
 
 public class UserDAOManager implements UserDAO {
 
     @Override
     public void insertUser(User user) {
-        final String query = "insert into users ( name, surname,email, picture_url, age, password) values (?,?,?,?,?,?)";
         PreparedStatement ps;
         try {
-            ps = connection.prepareStatement(query);
+            ps = connection.prepareStatement(insertUserQuery);
             ps.setString(1, user.getName());
             ps.setString(2, user.getSurname());
             ps.setString(3, user.getEmail());
@@ -33,8 +33,7 @@ public class UserDAOManager implements UserDAO {
 
     @Override
     public User getUserByID(int userID) throws SQLException {
-        final String query = "select * from users where id =" + userID;
-        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        PreparedStatement preparedStatement = connection.prepareStatement(getUserByIDQuery + userID);
         ResultSet resultSet = preparedStatement.executeQuery();
         String email = "";
         String name = "";
@@ -56,8 +55,7 @@ public class UserDAOManager implements UserDAO {
 
     @Override
     public List<User> getAllUser() throws SQLException {
-        final String query = "select * from users";
-        PreparedStatement stmt = connection.prepareStatement(query);
+        PreparedStatement stmt = connection.prepareStatement(getAllUserQuery);
         ResultSet resultSet = stmt.executeQuery();
         List<User> userList = new ArrayList<>();
         while (resultSet.next()) {
@@ -77,15 +75,14 @@ public class UserDAOManager implements UserDAO {
     public int findIdByEmail(String email) {
         PreparedStatement ps;
         try {
-            final String query = "select * from users";
-            ps = connection.prepareStatement(query);
+            ps = connection.prepareStatement(findIdByEmailQuery);
             ResultSet resultSet = ps.executeQuery();
             String emailX;
             int id;
             while (resultSet.next()) {
                 id = resultSet.getInt("id");
                 emailX = resultSet.getString("email");
-                if (email.equalsIgnoreCase(email)) {
+                if (emailX.equals(email)) {
                     return id;
                 }
             }

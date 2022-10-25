@@ -1,7 +1,7 @@
-package controller.user;
-
+package controller;
 
 import jakarta.servlet.ServletOutputStream;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -12,12 +12,14 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import static validator.PasswordEncoder.passwordEncoder;
+import static constants.controllerConstants.ControllerLayerConstants.userLoginServletPath;
+import static util.DBOperation.getUserIdByEmailFromDB;
 
-public class UserRegisterServlet extends HttpServlet {
+public class UserLoginServlet extends HttpServlet {
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
-        Path path = Paths.get("./src/main/resources/template/registration.html");
+        Path path = Paths.get(userLoginServletPath);
         ServletOutputStream os;
         try {
             os = resp.getOutputStream();
@@ -29,14 +31,12 @@ public class UserRegisterServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        String name = req.getParameter("name");
-        String surname = req.getParameter("surname");
         String email = req.getParameter("email");
-        String pictureURL = req.getParameter("picUrl");
-        String age = req.getParameter("age");
-        String password = req.getParameter("password");
-        UserServiceManager usersDaoService = new UserServiceManager();
-        usersDaoService.insertUser(name, surname, email, pictureURL, Integer.parseInt(age), passwordEncoder(password));
-        resp.sendRedirect("/login");
+        UserServiceManager userServiceManager = new UserServiceManager();
+        int uid = getUserIdByEmailFromDB(email, userServiceManager);
+        Cookie c = new Cookie("%Cookies%", String.valueOf(uid));
+        c.setPath("/");
+        resp.addCookie(c);
+        resp.sendRedirect("/list/");
     }
 }
