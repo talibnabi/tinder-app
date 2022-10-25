@@ -4,9 +4,13 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="/webstock/webfiles/images/logo.png" type="image/png">
     <title>MatchMe Here</title>
 
-    <link rel="stylesheet" href="/template/webcontent/vendors/linericon/style.css">
+    <link rel="stylesheet" href="/webstock/webfiles/css/bootstrap.css">
+    <link rel="stylesheet" href="/webstock/webfiles/vendors/linericon/style.css">
+    <link rel="stylesheet" href="/webstock/webfiles/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/webstock/webfiles/css/styler.css">
 
 </head>
 <body>
@@ -16,19 +20,19 @@
             <div class="profile_inner p_50">
                 <div class="row">
                     <div class="col-lg-5">
-                        <img class="img-fluid" src=${likedPeople.pictureURL} alt="">
+                        <img class="img-fluid" src=${likedPeople.picURL} alt="">
                     </div>
                     <div class="col-lg-7">
                         <div class="personal_text">
                             <h3>${likedPeople.name}</h3>
-                            <h4>Software Developer</h4>
-                            <p>Talib is number one! Rahib is number zero!</p>
+                            <h4>Java Developer</h4>
+                            <p>Rafig is number one! Orxan is number zero!</p>
                             <div class="mini_container">
                                 <ul class="list basic_info" style="padding-top: 15px; padding-bottom: 15px">
                                     <h5>Personal Information:</h5>
                                     <li><a><i class="lnr lnr-calendar-full"></i> ${likedPeople.age} years old</a></li>
                                     <li><a><i class="lnr lnr-envelope"></i> ${likedPeople.email}</a></li>
-                                    <li><a><i class="lnr lnr-phone-handset"></i> (+994 51) 831 21 65</a></li>
+                                    <li><a><i class="lnr lnr-phone-handset"></i> (+994 50) 573 27 30</a></li>
                                     <li><a><i class="lnr lnr-home"></i> Baku, Azerbaijan</a></li>
                                 </ul>
                             </div>

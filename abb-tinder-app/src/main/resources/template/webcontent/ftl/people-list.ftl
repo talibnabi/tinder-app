@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>People list</title>
+    <link rel="icon" href="/webstock/webfiles/images/logo.png">
 
+    <title>People list</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!-- Bootstrap core CSS -->
+    <link href="/webstock/webfiles/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="/webstock/webfiles/css/styled.css">
 </head>
 <body>
 
@@ -41,7 +48,7 @@
                             <tr>
                                 <td width="10">
                                     <div class="avatar-img">
-                                        <img class="img-circle" src=${person.pictureURL} />
+                                        <img class="img-circle" src=${person.picURL} />  
                                     </div>
                                 </td>
                                 <td class="align-middle">

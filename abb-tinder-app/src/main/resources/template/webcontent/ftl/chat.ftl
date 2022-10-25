@@ -2,13 +2,13 @@
 <html>
 <head>
     <title>Chat</title>
-    <link rel="stylesheet" href="/template/webcontent/chat_files/bootstrap.min.css">
-    <script src="/template/webcontent/chat_files/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/template/webcontent/chat_files/jquery.mCustomScrollbar.min.css">
-    <script type="text/javascript" src="/template/webcontent/chat_files/jquery.mCustomScrollbar.min.js"></script>
-    <link rel="stylesheet" href="/template/webcontent/chat_files/style.css">
-    <script type="text/javascript" src="/template/webcontent/chat_files/main.js"></script>
-    <link rel="stylesheet" href="/template/webcontent/chat_files/all.css">
+    <link rel="stylesheet" href="/webstock/webfiles/chat_files/bootstrap.min.css">
+    <script src="/webstock/webfiles/chat_files/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/webstock/webfiles/chat_files/jquery.mCustomScrollbar.min.css">
+    <script type="text/javascript" src="/webstock/webfiles/chat_files/jquery.mCustomScrollbar.min.js"></script>
+    <link rel="stylesheet" href="/webstock/webfiles/chat_files/style.css">
+    <script type="text/javascript" src="/webstock/webfiles/chat_files/main.js"></script>
+    <link rel="stylesheet" href="/webstock/webfiles/chat_files/all.css">
 
 </head>
 
@@ -41,7 +41,7 @@
                 <div class="card-header msg_head">
                     <div class="d-flex bd-highlight combinedHeader">
                         <div class="img_cont">
-                            <img src=${receiverPic.pictureURL} class="rounded-circle user_img">
+                            <img src=${receiverPic.picURL} class="rounded-circle user_img">
                         </div>
                         <div class="user_info">
                             <span>Chat with ${receiverPic.name} </span>
@@ -57,13 +57,13 @@
                                     <span class="msg_time_send" style="width: 100px; text-align: right">${message.dateString}</span>
                                 </div>
                                 <div class="img_cont_msg">
-                                    <img src=${senderPic.pictureURL} class="rounded-circle user_img_msg">
+                                    <img src=${senderPic.picURL} class="rounded-circle user_img_msg">
                                 </div>
                             </div>
                         <#else>
                             <div class="combinedReceive" style="margin-bottom:1.5rem">
                                 <div class="img_cont_msg">
-                                    <img src=${receiverPic.pictureURL} class="rounded-circle user_img_msg">
+                                    <img src=${receiverPic.picURL} class="rounded-circle user_img_msg">
                                 </div>
                                 <div class="msg_cotainer">
                                     ${message.content}

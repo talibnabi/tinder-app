@@ -1,7 +1,6 @@
 package controller;
 
 import cookies.Cookies;
-import finding.abstracts.NonLikedUserFind;
 import finding.concretes.NonLikedUserFindManager;
 import freemarker.FreemarkerTemplateConfigurer;
 import jakarta.servlet.http.HttpServlet;
