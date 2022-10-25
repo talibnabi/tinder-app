@@ -1,4 +1,9 @@
 package finding.abstracts;
 
-public interface NonLikedUserFind {
+import model.User;
+
+import java.util.List;
+
+public interface NonLikedUserFind extends Find<User> {
+    List<User> getUser(int id);
 }
