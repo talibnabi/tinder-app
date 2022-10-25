@@ -11,8 +11,10 @@ import static constants.findingConstants.FindingLayerConstants.serviceLike;
 import static constants.findingConstants.FindingLayerConstants.serviceUser;
 
 public class NonLikedUserFindManager implements NonLikedUserFind {
+    private static final NonLikedUserFindManager nonLikedUserFindManager = new NonLikedUserFindManager();
+
     @Override
-    public List<User> getUser(int id) {
+    public List<Integer> getUser(int id) {
         return serviceUser
                 .getAllUser()
                 .stream()
@@ -22,7 +24,10 @@ public class NonLikedUserFindManager implements NonLikedUserFind {
                         .map(Like::getUserTo)
                         .collect(Collectors.toSet())
                         .contains(id))
-                .map(serviceUser::getUserByID)
                 .collect(Collectors.toList());
+    }
+
+    public static List<Integer> getNonLikedUser(int id) {
+        return nonLikedUserFindManager.getUser(id);
     }
 }

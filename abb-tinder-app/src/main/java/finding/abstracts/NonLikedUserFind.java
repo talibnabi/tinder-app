@@ -4,6 +4,6 @@ import model.User;
 
 import java.util.List;
 
-public interface NonLikedUserFind extends Find<User> {
-    List<User> getUser(int id);
+public interface NonLikedUserFind extends Find<Integer> {
+    List<Integer> getUser(int id);
 }
