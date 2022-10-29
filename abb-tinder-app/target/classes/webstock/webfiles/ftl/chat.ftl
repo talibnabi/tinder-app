@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Chat</title>
+    <title>MESSAGES</title>
     <link rel="stylesheet" href="/webstock/webfiles/chat_files/bootstrap.min.css">
     <script src="/webstock/webfiles/chat_files/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/webstock/webfiles/chat_files/jquery.mCustomScrollbar.min.css">
@@ -56,17 +56,18 @@
                                     ${message.messageMaintenance}
                                 </div>
                                 <div class="img_cont_msg">
-                                    <img src=${senderPic.picURL} class="rounded-circle user_img_msg">
+                                    <img src=${senderPic.picURL} alt="photo" class="float-left">
                                 </div>
                             </div>
                         <#else>
                             <div class="combinedReceive" style="margin-bottom:1.5rem">
                                 <div class="img_cont_msg">
-                                    <img src=${receiverPic.picURL} class="rounded-circle user_img_msg>
+                                    <img src=${receiverPic.picURL} alt="photo" class="float-left">
                                 </div>
                                 <div class="msg_cotainer">
                                     ${message.messageMaintenance}
-                                    <span class="msg_time" style="width: 100px; text-align: left">${message.dateString}</span>
+                                    <span class="msg_time"
+                                          style="width: 100px; text-align: left">${message.dateString}</span>
                                 </div>
                             </div>
                         </#if>
@@ -75,7 +76,8 @@
                 <div class="card-footer">
                     <div class="input-group">
                         <form method="post" style="width: 100%">
-                            <input type="text" name="message" class="form-control type_msg" placeholder="Type your message..." autocomplete="off">
+                            <input type="text" name="message" class="form-control type_msg"
+                                   placeholder="Send your message..." autocomplete="off">
                         </form>
                     </div>
                 </div>

@@ -20,13 +20,12 @@
             <div class="profile_inner p_50">
                 <div class="row">
                     <div class="col-lg-5">
-                        <img class="img-fluid" src=${likedPeople.picURL} alt="">
+                        <img class="img-fluid" src=${likedPeople.picURL} alt="" alt="">
                     </div>
                     <div class="col-lg-7">
                         <div class="personal_text">
                             <h3>${likedPeople.name}</h3>
                             <h4>Java Backend Developer</h4>
-                            <p>Talib is number one! Rahib is number zero!</p>
                             <div class="mini_container">
                                 <ul class="list basic_info" style="padding-top: 15px; padding-bottom: 15px">
                                     <h5>Personal Information:</h5>
