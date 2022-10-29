@@ -29,7 +29,10 @@ public class MessageServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         cookiesToID = Cookies.getIdFromCookies(request);
-        pathID = Integer.parseInt(request.getPathInfo().replace("/", ""));
+        System.out.println("cookies id: "+cookiesToID);
+        String path=request.getPathInfo().replace("/", "");
+        pathID = Integer.parseInt(path);
+        System.out.println("path id :"+pathID);
         User senderForPic = userServiceManager.getUserByID(cookiesToID);
         User receiverForPic = userServiceManager.getUserByID(pathID);
         HashMap<String, Object> data = new HashMap<>();

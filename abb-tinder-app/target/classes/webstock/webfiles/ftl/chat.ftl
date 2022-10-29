@@ -18,17 +18,17 @@
     <div class="newrow">
         <div class="newcolumn">
             <button type="button" class="btn btn-outline-warning btn-block"
-                    onclick="window.location.href = '/list/';"> Liked Users
+                    onclick="window.location.href = '/list/';"> LIKED USERS
             </button>
         </div>
         <div class="newcolumn">
             <button type="button" class="btn btn-outline-warning btn-block"
-                    onclick="window.location.href = '/like';"> Matching Page
+                    onclick="window.location.href = '/like';"> ESSENTIAL PAGE
             </button>
         </div>
         <div class="newcolumn">
             <button type="button" class="btn btn-outline-warning btn-block"
-                    onclick="window.location.href = '/logout';"> Logout
+                    onclick="window.location.href = '/logout';"> LOGOUT
             </button>
         </div>
     </div>
@@ -44,7 +44,7 @@
                             <img src=${receiverPic.picURL} class="rounded-circle user_img">
                         </div>
                         <div class="user_info">
-                            <span>Chat with ${receiverPic.name} </span>
+                            <span>CHAT WITH---> ${receiverPic.name} </span>
                         </div>
                     </div>
                 </div>
@@ -53,8 +53,7 @@
                         <#if message.from == sender>
                             <div class="combinedSend">
                                 <div class="msg_cotainer_send">
-                                    ${message.content}
-                                    <span class="msg_time_send" style="width: 100px; text-align: right">${message.dateString}</span>
+                                    ${message.messageMaintenance}
                                 </div>
                                 <div class="img_cont_msg">
                                     <img src=${senderPic.picURL} class="rounded-circle user_img_msg">
@@ -66,7 +65,7 @@
                                     <img src=${receiverPic.picURL} class="rounded-circle user_img_msg>
                                 </div>
                                 <div class="msg_cotainer">
-                                    ${message.content}
+                                    ${message.messageMaintenance}
                                     <span class="msg_time" style="width: 100px; text-align: left">${message.dateString}</span>
                                 </div>
                             </div>

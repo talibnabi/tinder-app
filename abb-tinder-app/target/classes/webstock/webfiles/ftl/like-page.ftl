@@ -32,7 +32,7 @@
                                     <h5>Personal Information:</h5>
                                     <li><a><i class="lnr lnr-calendar-full"></i> ${likedPeople.age} years old</a></li>
                                     <li><a><i class="lnr lnr-envelope"></i> ${likedPeople.email}</a></li>
-                                    <li><a><i class="lnr lnr-phone-handset"></i> (+994 50) 573 27 30</a></li>
+                                    <li><a><i class="lnr lnr-phone-handset"></i> (+994 51) 831 21 65</a></li>
                                     <li><a><i class="lnr lnr-home"></i> Baku, Azerbaijan</a></li>
                                 </ul>
                             </div>
