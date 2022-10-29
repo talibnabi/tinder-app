@@ -1,7 +1,10 @@
 package com.company.model;
 
+import lombok.AllArgsConstructor;
+
 import java.util.Objects;
 
+@AllArgsConstructor
 public class User {
 
     private final String name;
@@ -10,15 +13,6 @@ public class User {
     private final String picURL;
     private final int age;
     private final String password;
-
-    public User(String name, String surname, String email, String picURL, int age, String password) {
-        this.name = name;
-        this.surname = surname;
-        this.email = email;
-        this.picURL = picURL;
-        this.age = age;
-        this.password = password;
-    }
 
     public String getName() {
         return name;

@@ -1,9 +1,11 @@
 package com.company.model;
 
 import com.company.util.DateFormatOperation;
+import lombok.AllArgsConstructor;
 
 import java.util.Objects;
 
+@AllArgsConstructor
 public class Message {
     private final int from;
     private final int to;
