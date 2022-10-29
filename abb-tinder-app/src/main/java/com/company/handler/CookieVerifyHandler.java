@@ -7,6 +7,6 @@ import com.company.cookies.Cookies;
 public class CookieVerifyHandler {
 
     public static boolean checkCookies(ServletRequest req) {
-        return (Cookies.getIdFromCookies(((HttpServletRequest) req)) < 1);
+        return Cookies.getIdFromCookies(((HttpServletRequest) req)) < 1;
     }
 }
