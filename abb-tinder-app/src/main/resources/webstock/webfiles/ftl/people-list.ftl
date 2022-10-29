@@ -33,49 +33,48 @@
 </div>
 
 <div class="container">
-    <div class="row" >
+    <div class="row">
         <form method="post">
-        <div class="col-8 offset-2">
-            <div class="panel panel-default user_panel">
-                <div class="panel-heading">
-                    <h3 class="panel-title" style="text-align: center; font-size: 24px; -webkit-text-stroke: 1px lightblue; color: #000000">User List</h3>
-                </div>
-                <div class="panel-body">
-                    <div class="table-container">
-                        <table class="table-users table" border="0">
-                            <tbody>
-                            <#list likedPeople as person>
-                            <tr>
-                                <td width="10">
-                                    <div class="avatar-img">
-                                        <img class="img-circle" src=${person.picURL} />
-                                    </div>
-                                </td>
-                                <td class="align-middle">
-                                    <small class="minitext">Full Name</small><br>
-                                    <p class="normaltext">${person.name} ${person.surname}</p>
-                                </td>
-                                <td class="align-middle" style="padding-left: 100px">
-                                    <small class="minitext">Age</small><br>
-                                    <p class="normaltext">${person.age}</p>
-                                </td>
-                                <td  class="align-middle" style="padding-left: 100px">
-                                    <small class="minitext">E-mail</small><br>
-                                    <p class="normaltext">${person.email}</p>
-                                </td>
-                                <td  class="align-middle" style="padding-left: 100px">
-                                <button type="submit" name="email" value='${person.email}' class="btn btn-outline-warning btn-block"
-                                              > Chat
-                                </button>
-                                </td>
-                            </tr>
-                            </#list>
-                            </tbody>
-                        </table>
+            <div class="col-8 offset-2">
+                <div class="panel panel-default user_panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"
+                            style="text-align: center; font-size: 24px; -webkit-text-stroke: 1px #6a868f; color: #c49a9a">
+                            User List</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="table-container">
+                            <table class="table-users table" border="0">
+                                <tbody>
+                                <#list likedPeople as user>
+                                    <tr>
+                                        <td width="10">
+                                            <div class="avatar-img">
+                                                <img class="img-circle" style="width:550%;" src=${user.picURL}/>
+                                            </div>
+                                        </td>
+                                        <td class="align-middle">
+                                            ${user.name} ${user.surname}
+                                        </td>
+                                        <td class="align-middle" style="padding-left: 100px">
+                                            ${user.age}
+                                        </td>
+                                        <td class="align-middle" style="padding-left: 100px">
+                                            ${user.email}
+                                        </td>
+                                        <td class="align-middle" style="padding-left: 100px">
+                                            <button type="submit" name="email" value='${user.email}'
+                                                    class="btn btn-outline-warning btn-block">Chat
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </#list>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </form>
     </div>
 </div>

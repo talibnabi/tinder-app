@@ -25,8 +25,8 @@
                     <div class="col-lg-7">
                         <div class="personal_text">
                             <h3>${likedPeople.name}</h3>
-                            <h4>Java Developer</h4>
-                            <p>Rafig is number one! Orxan is number zero!</p>
+                            <h4>Java Backend Developer</h4>
+                            <p>Talib is number one! Rahib is number zero!</p>
                             <div class="mini_container">
                                 <ul class="list basic_info" style="padding-top: 15px; padding-bottom: 15px">
                                     <h5>Personal Information:</h5>
