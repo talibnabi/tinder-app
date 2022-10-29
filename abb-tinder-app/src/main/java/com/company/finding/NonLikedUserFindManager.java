@@ -5,19 +5,18 @@ import com.company.model.Like;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.company.constants.finding.FindingLayerConstants.serviceLike;
-import static com.company.constants.finding.FindingLayerConstants.serviceUser;
+import static com.company.constants.finding.FindingLayerConstants.*;
 
-public class NonLikedUserFindManager  {
+public class NonLikedUserFindManager {
 
 
     public static List<Integer> getUser(int id) {
-        return serviceUser
+        return userServiceManager
                 .getAllUser()
                 .stream()
-                .filter(user -> serviceUser.findUserIdByEmail(user.getEmail()) != id)
-                .map(user -> serviceUser.findUserIdByEmail(user.getEmail()))
-                .filter(idX -> !serviceLike.getAllSigned(id).stream()
+                .filter(user -> userServiceManager.findUserIdByEmail(user.getEmail()) != id)
+                .map(user -> userServiceManager.findUserIdByEmail(user.getEmail()))
+                .filter(idX -> !likeServiceManager.getAllSigned(id).stream()
                         .map(Like::getUserTo)
                         .collect(Collectors.toSet())
                         .contains(id))
