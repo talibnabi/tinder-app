@@ -17,7 +17,7 @@ public class NonLikedUserFindManager {
                 .filter(user -> userServiceManager.findUserIdByEmail(user.getEmail()) != id)
                 .map(user -> userServiceManager.findUserIdByEmail(user.getEmail()))
                 .filter(idX -> !likeServiceManager.getAllSigned(id).stream()
-                        .map(Like::getUserTo)
+                        .map(Like::getTo)
                         .collect(Collectors.toSet())
                         .contains(id))
                 .collect(Collectors.toList());

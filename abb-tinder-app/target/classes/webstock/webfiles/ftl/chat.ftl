@@ -63,7 +63,7 @@
                         <#else>
                             <div class="combinedReceive" style="margin-bottom:1.5rem">
                                 <div class="img_cont_msg">
-                                    <img src=${receiverPic.picURL} class="rounded-circle user_img_msg">
+                                    <img src=${receiverPic.picURL} class="rounded-circle user_img_msg>
                                 </div>
                                 <div class="msg_cotainer">
                                     ${message.content}

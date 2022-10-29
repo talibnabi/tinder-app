@@ -18,13 +18,12 @@ public class LikeDAOManager implements LikeDAO {
         PreparedStatement ps;
         try {
             ps = connection.prepareStatement(insertLikeQuery);
-            ps.setInt(1, like.getUserFrom());
-            ps.setInt(2, like.getUserTo());
+            ps.setInt(1, like.getFrom());
+            ps.setInt(2, like.getTo());
             ps.setBoolean(3, like.isLike());
             ps.execute();
         } catch (SQLException e) {
             throw new RuntimeException("Something went wrong during inserting like", e);
-
         }
     }
 

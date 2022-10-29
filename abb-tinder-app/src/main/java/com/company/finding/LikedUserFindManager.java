@@ -17,7 +17,7 @@ public class LikedUserFindManager  {
                 .filter(user -> userServiceManager.findUserIdByEmail(user.getEmail()) != id)
                 .map(user -> userServiceManager.findUserIdByEmail(user.getEmail()))
                 .filter(idX -> likeServiceManager.getAllLikedUser(id).stream()
-                        .map(Like::getUserTo)
+                        .map(Like::getTo)
                         .collect(Collectors.toSet())
                         .contains(id))
                 .map(userServiceManager::getUserByID)

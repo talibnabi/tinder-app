@@ -33,7 +33,7 @@ public class LikeServiceManager implements LikeService {
             return likeDAOManager
                     .getAllLike()
                     .stream()
-                    .filter(u -> u.getUserFrom() == _from)
+                    .filter(u -> u.getFrom() == _from)
                     .collect(Collectors.toSet());
         } catch (SQLException e) {
             throw new RuntimeException("Something went wrong during get all signed", e);
@@ -46,7 +46,7 @@ public class LikeServiceManager implements LikeService {
             return likeDAOManager
                     .getAllLike()
                     .stream()
-                    .filter(u -> u.getUserFrom() == _from)
+                    .filter(u -> u.getFrom() == _from)
                     .filter(Like::isLike)
                     .collect(Collectors.toSet());
         } catch (SQLException e) {
