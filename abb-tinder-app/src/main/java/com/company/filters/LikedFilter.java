@@ -5,13 +5,13 @@ import com.company.finding.NonLikedUserFindManager;
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
-import java.io.IOException;
+import lombok.SneakyThrows;
 
 public class LikedFilter implements Filter {
 
+    @SneakyThrows
     @Override
-    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) {
         HttpServletRequest req = (HttpServletRequest) servletRequest;
         HttpServletResponse rs = (HttpServletResponse) servletResponse;
         if (req.getMethod().equalsIgnoreCase("GET")) {
