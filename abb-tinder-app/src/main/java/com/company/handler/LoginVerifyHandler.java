@@ -2,7 +2,7 @@ package com.company.handler;
 
 import jakarta.servlet.ServletRequest;
 import com.company.service.concretes.UserServiceManager;
-import com.company.validator.PasswordEncoder;
+import com.company.validator.PasswordValidation;
 
 public class LoginVerifyHandler {
     public static boolean isLoginCorrect(ServletRequest req) {
@@ -16,7 +16,7 @@ public class LoginVerifyHandler {
             return service.getAllUser().stream().filter(user -> user.getEmail().equals(email))
                     .allMatch(user -> {
                         try {
-                            return user.getPassword().equals(PasswordEncoder.passwordEncoder(password));
+                            return PasswordValidation.passwordDecoder(user.getPassword()).equals(password);
                         } catch (Exception e) {
                             throw new RuntimeException("Something went wrong during checking login", e);
                         }
