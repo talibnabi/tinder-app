@@ -2,6 +2,7 @@ package com.company.controller.user;
 
 import com.company.constants.controller.ControllerLayerConstants;
 import jakarta.servlet.ServletOutputStream;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -15,6 +16,7 @@ import java.nio.file.Paths;
 
 import static com.company.util.DBOperation.getUserIdByEmailFromDB;
 
+@WebServlet
 public class UserLoginServlet extends HttpServlet {
 
     @Override

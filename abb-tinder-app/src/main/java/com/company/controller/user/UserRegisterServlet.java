@@ -3,6 +3,7 @@ package com.company.controller.user;
 
 import com.company.constants.controller.ControllerLayerConstants;
 import jakarta.servlet.ServletOutputStream;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -15,6 +16,7 @@ import java.nio.file.Paths;
 
 import static com.company.matcher.MatchPassword.passwordEncoder;
 
+@WebServlet
 public class UserRegisterServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
