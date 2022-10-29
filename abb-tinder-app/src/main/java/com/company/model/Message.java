@@ -2,9 +2,11 @@ package com.company.model;
 
 import com.company.util.DateFormatOperation;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 
 import java.util.Objects;
 
+@Getter
 @AllArgsConstructor
 public class Message {
     private final int from;
@@ -19,22 +21,6 @@ public class Message {
         this.messageMaintenance = messageMaintenance;
         this.dateWithLong = dateWithLong;
         this.dateString = DateFormatOperation.dateFormat(dateWithLong);
-    }
-
-    public int getFrom() {
-        return from;
-    }
-
-    public int getTo() {
-        return to;
-    }
-
-    public String getMessageMaintenance() {
-        return messageMaintenance;
-    }
-
-    public long getDate() {
-        return dateWithLong;
     }
 
     @Override

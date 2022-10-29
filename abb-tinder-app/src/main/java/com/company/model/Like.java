@@ -1,26 +1,19 @@
 package com.company.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.ToString;
 
 import java.util.Objects;
 
+@Getter
+@ToString
 @AllArgsConstructor
 public class Like {
     private final int userFrom;
     private final int userTo;
     private final boolean like;
 
-    public int getUserFrom() {
-        return userFrom;
-    }
-
-    public int getUserTo() {
-        return userTo;
-    }
-
-    public boolean isLike() {
-        return like;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -34,12 +27,4 @@ public class Like {
         return Objects.hash(getUserFrom(), getUserTo());
     }
 
-    @Override
-    public String toString() {
-        return "Like{" +
-                "userFrom=" + userFrom +
-                ", userTo=" + userTo +
-                ", like=" + like +
-                '}';
-    }
 }

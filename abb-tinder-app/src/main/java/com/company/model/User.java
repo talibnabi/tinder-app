@@ -1,9 +1,11 @@
 package com.company.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 
 import java.util.Objects;
 
+@Getter
 @AllArgsConstructor
 public class User {
 
@@ -14,29 +16,6 @@ public class User {
     private final int age;
     private final String password;
 
-    public String getName() {
-        return name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getPicURL() {
-        return picURL;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public String getPassword() {
-        return password;
-    }
 
     @Override
     public boolean equals(Object o) {
