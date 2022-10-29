@@ -29,21 +29,6 @@ public class LikeDAOManager implements LikeDAO {
     }
 
     @Override
-    public Like getLikeByID(int likeID) throws SQLException {
-        PreparedStatement statement = connection.prepareStatement(getLikeByIDQuery + likeID);
-        ResultSet resultSet = statement.executeQuery();
-        int _from = 0;
-        int _to = 0;
-        boolean liked = false;
-        while (resultSet.next()) {
-            _from = resultSet.getInt("_from");
-            _to = resultSet.getInt("_to");
-            liked = resultSet.getBoolean("liked");
-        }
-        return new Like(_from, _to, liked);
-    }
-
-    @Override
     public List<Like> getAllLike() throws SQLException {
         PreparedStatement statement = connection.prepareStatement(getAllLikeQuery);
         ResultSet resultSet = statement.executeQuery();

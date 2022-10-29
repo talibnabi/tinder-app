@@ -21,7 +21,7 @@ import static com.company.constants.freemarker.FreemarkerLayerConstants.ftlPath;
 
 public class ApplicationStarter {
     public static void main(String[] args) throws Exception {
-        Server webServer = new Server(8090);
+        Server webServer = new Server(8098);
         ServletContextHandler webHandler = new ServletContextHandler();
         FreemarkerTemplateConfigurer configurer = new FreemarkerTemplateConfigurer(ftlPath);
 
