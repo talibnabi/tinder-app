@@ -13,7 +13,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import static com.company.validator.PasswordValidation.passwordEncoder;
+import static com.company.matcher.MatchPassword.passwordEncoder;
 
 public class UserRegisterServlet extends HttpServlet {
     @Override

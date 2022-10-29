@@ -1,9 +1,9 @@
-package com.company.validator;
+package com.company.matcher;
 
-import static com.company.constants.validation.ValidationLayerConstants.decoder;
-import static com.company.constants.validation.ValidationLayerConstants.encoder;
+import static com.company.constants.matcher.MatcherLayerConstants.decoder;
+import static com.company.constants.matcher.MatcherLayerConstants.encoder;
 
-public class PasswordValidation {
+public class MatchPassword {
 
     public static String passwordEncoder(String password) {
         return encoder.encodeToString(password.getBytes());
