@@ -4,7 +4,7 @@ import jakarta.servlet.ServletRequest;
 import com.company.service.concretes.UserServiceManager;
 import com.company.matcher.MatchPassword;
 
-public class LoginVerifyHandler {
+public class UserLoginVerifyHandler {
     public static boolean isLoginCorrect(ServletRequest req) {
         String email = req.getParameter("email");
         String password = req.getParameter("password");

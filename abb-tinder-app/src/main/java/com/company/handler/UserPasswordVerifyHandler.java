@@ -3,7 +3,7 @@ package com.company.handler;
 
 import jakarta.servlet.ServletRequest;
 
-public class PasswordVerifyHandler {
+public class UserPasswordVerifyHandler {
     public static boolean checkPasswordEquals(ServletRequest req) {
         String password = req.getParameter("password");
         String passwordRepeat = req.getParameter("repassword");

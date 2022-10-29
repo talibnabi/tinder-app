@@ -7,7 +7,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-import static com.company.handler.LoginVerifyHandler.isLoginCorrect;
+import static com.company.handler.UserLoginVerifyHandler.isLoginCorrect;
 
 public class UserLoginFilter implements Filter {
 

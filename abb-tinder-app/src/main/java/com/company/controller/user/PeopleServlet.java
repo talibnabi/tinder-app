@@ -1,4 +1,4 @@
-package com.company.controller;
+package com.company.controller.user;
 
 import com.company.cookies.Cookies;
 import com.company.finding.LikedUserFindManager;

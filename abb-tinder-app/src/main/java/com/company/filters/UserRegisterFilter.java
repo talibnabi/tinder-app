@@ -7,7 +7,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-import static com.company.handler.PasswordVerifyHandler.checkPasswordEquals;
+import static com.company.handler.UserPasswordVerifyHandler.checkPasswordEquals;
 import static com.company.handler.UserVerifyHandler.isUniqueUser;
 
 public class UserRegisterFilter implements Filter {

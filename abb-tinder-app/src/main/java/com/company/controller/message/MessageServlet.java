@@ -1,4 +1,4 @@
-package com.company.controller;
+package com.company.controller.message;
 
 import com.company.cookies.Cookies;
 import com.company.freemarker.FreemarkerTemplateConfigurer;

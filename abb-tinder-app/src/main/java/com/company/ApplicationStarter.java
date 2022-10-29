@@ -1,6 +1,13 @@
 package com.company;
 
-import com.company.controller.*;
+import com.company.controller.like.LikeServlet;
+import com.company.controller.message.MessageServlet;
+import com.company.controller.path.PathServlet;
+import com.company.controller.redirect.RedirectServlet;
+import com.company.controller.user.PeopleServlet;
+import com.company.controller.user.UserLoginServlet;
+import com.company.controller.user.UserLogoutServlet;
+import com.company.controller.user.UserRegisterServlet;
 import com.company.filters.*;
 import com.company.freemarker.FreemarkerTemplateConfigurer;
 import jakarta.servlet.DispatcherType;

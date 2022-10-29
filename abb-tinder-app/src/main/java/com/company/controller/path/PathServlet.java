@@ -1,4 +1,4 @@
-package com.company.controller;
+package com.company.controller.path;
 
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;

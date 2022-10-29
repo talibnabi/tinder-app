@@ -1,4 +1,4 @@
-package com.company.controller;
+package com.company.controller.user;
 
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
