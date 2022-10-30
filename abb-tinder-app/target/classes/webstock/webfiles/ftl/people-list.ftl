@@ -39,7 +39,7 @@
                 <div class="panel panel-default user_panel">
                     <div class="panel-heading">
                         <h3 class="panel-title"
-                            style="text-align: center; font-size: 24px; -webkit-text-stroke: 1px #6a868f; color: #c49a9a">
+                            style="text-align: center; font-size: 24px; -webkit-text-stroke: 1px #ffffff; color: #332e2e">
                             User List</h3>
                     </div>
                     <div class="panel-body">
@@ -47,25 +47,36 @@
                             <table class="table-users table" border="0">
                                 <tbody>
                                 <#list likedPeople as user>
-                                    <tr>
-                                        <td width="10">
+<#--                                    <tr>-->
+<#--&lt;#&ndash;                                        <td width="10">&ndash;&gt;-->
+<#--&lt;#&ndash;                                            <div class="avatar-img">&ndash;&gt;-->
+<#--&lt;#&ndash;                                                <img class="img-circle" style="width:550%;" src=${user.picURL}/>&ndash;&gt;-->
+<#--&lt;#&ndash;                                            </div>&ndash;&gt;-->
+<#--&lt;#&ndash;                                        </td>&ndash;&gt;-->
+<#--                                        <td class="align-middle">-->
+<#--                                            ${user.name} ${user.surname}-->
+<#--                                        </td>-->
+<#--                                        <td class="align-middle" style="padding-left: 100px">-->
+<#--                                            ${user.age}-->
+<#--                                        </td>-->
+<#--                                        <td class="align-middle" style="padding-left: 100px">-->
+<#--                                            ${user.email}-->
+<#--                                        </td>-->
+<#--                                        <td class="align-middle" style="padding-left: 100px">-->
+<#--                                            <button type="submit" name="email" value='${user.email}'-->
+<#--                                                    class="btn btn-outline-warning btn-block">Chat-->
+<#--                                            </button>-->
+<#--                                        </td>-->
+<#--                                    </tr>-->
+
+                                    <tr onclick="location.href='/chat/${user.getId()}'" class="bg-danger">
+                                        <td>
                                             <div class="avatar-img">
-                                                <img class="img-circle" style="width:550%;" src=${user.picURL}/>
+                                                <img class="img-circle" src="${user.getName()}" />
                                             </div>
                                         </td>
                                         <td class="align-middle">
-                                            ${user.name} ${user.surname}
-                                        </td>
-                                        <td class="align-middle" style="padding-left: 100px">
-                                            ${user.age}
-                                        </td>
-                                        <td class="align-middle" style="padding-left: 100px">
-                                            ${user.email}
-                                        </td>
-                                        <td class="align-middle" style="padding-left: 100px">
-                                            <button type="submit" name="email" value='${user.email}'
-                                                    class="btn btn-outline-warning btn-block">Chat
-                                            </button>
+                                            ${user.getUsername()}
                                         </td>
                                     </tr>
                                 </#list>

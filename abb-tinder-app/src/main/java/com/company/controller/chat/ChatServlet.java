@@ -1,4 +1,4 @@
-package com.company.controller.message;
+package com.company.controller.chat;
 
 import com.company.cookies.Cookies;
 import com.company.freemarker.FreemarkerTemplateConfigurer;
@@ -7,7 +7,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import com.company.model.User;
-import com.company.service.concretes.MessageServiceManager;
+import com.company.service.concretes.ChatServiceManager;
 import com.company.service.concretes.UserServiceManager;
 
 import java.io.IOException;
@@ -15,15 +15,15 @@ import java.sql.SQLException;
 import java.util.HashMap;
 
 @WebServlet
-public class MessageServlet extends HttpServlet {
+public class ChatServlet extends HttpServlet {
     private int cookiesToID;
     private int pathID;
     private final UserServiceManager userServiceManager = new UserServiceManager();
-    private final MessageServiceManager messageServiceManager;
+    private final ChatServiceManager messageServiceManager;
     private final FreemarkerTemplateConfigurer configurer;
 
-    public MessageServlet(FreemarkerTemplateConfigurer configurer) {
-        messageServiceManager = new MessageServiceManager();
+    public ChatServlet(FreemarkerTemplateConfigurer configurer) {
+        messageServiceManager = new ChatServiceManager();
         this.configurer = configurer;
     }
 

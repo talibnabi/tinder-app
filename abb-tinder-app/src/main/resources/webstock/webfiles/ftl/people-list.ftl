@@ -8,7 +8,8 @@
     <link rel="icon" href="/webstock/webfiles/images/logo.png">
 
     <title>People list</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <!-- Bootstrap core CSS -->
     <link href="/webstock/webfiles/css/bootstrap.min.css" rel="stylesheet">
 
@@ -39,7 +40,7 @@
                 <div class="panel panel-default user_panel">
                     <div class="panel-heading">
                         <h3 class="panel-title"
-                            style="text-align: center; font-size: 24px; -webkit-text-stroke: 1px #6a868f; color: #c49a9a">
+                            style="text-align: center; font-size: 24px; -webkit-text-stroke: 1px #ffffff; color: #332e2e">
                             User List</h3>
                     </div>
                     <div class="panel-body">
@@ -66,6 +67,17 @@
                                             <button type="submit" name="email" value='${user.email}'
                                                     class="btn btn-outline-warning btn-block">Chat
                                             </button>
+                                        </td>
+                                    </tr>
+
+                                    <tr onclick="location.href='/chat/${user.getId()}'" class="bg-danger">
+                                        <td>
+                                            <div class="avatar-img">
+                                                <img class="img-circle" src="${user.getName()}"/>
+                                            </div>
+                                        </td>
+                                        <td class="align-middle">
+                                            ${user.getUsername()}
                                         </td>
                                     </tr>
                                 </#list>

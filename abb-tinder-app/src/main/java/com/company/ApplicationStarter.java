@@ -1,7 +1,7 @@
 package com.company;
 
 import com.company.controller.like.LikeServlet;
-import com.company.controller.message.MessageServlet;
+import com.company.controller.chat.ChatServlet;
 import com.company.controller.path.PathServlet;
 import com.company.controller.redirect.RedirectServlet;
 import com.company.controller.user.PeopleServlet;
@@ -27,7 +27,7 @@ public class ApplicationStarter {
 
         webHandler.addServlet(new ServletHolder(new PeopleServlet(configurer)), "/list/*");
         webHandler.addServlet(new ServletHolder(new LikeServlet(configurer)), "/like");
-        webHandler.addServlet(new ServletHolder(new MessageServlet(configurer)), "/chat/*");
+        webHandler.addServlet(new ServletHolder(new ChatServlet(configurer)), "/chat/*");
         webHandler.addServlet(new ServletHolder(new UserLoginServlet()), "/login/*");
         webHandler.addServlet(new ServletHolder(new UserLogoutServlet()), "/logout/*");
         webHandler.addServlet(new ServletHolder(new UserRegisterServlet()), "/register/*");
@@ -40,7 +40,7 @@ public class ApplicationStarter {
         webHandler.addFilter(LikedFilter.class, "/like", EnumSet.of(DispatcherType.REQUEST));
         webHandler.addFilter(NonLikedFilter.class, "/like", EnumSet.of(DispatcherType.REQUEST));
         webHandler.addFilter(CookiesFilter.class, "/chat/*", EnumSet.of(DispatcherType.REQUEST));
-        webHandler.addFilter(MessageFilter.class, "/chat/*", EnumSet.of(DispatcherType.REQUEST));
+        webHandler.addFilter(ChatFilter.class, "/chat/*", EnumSet.of(DispatcherType.REQUEST));
         webServer.setHandler(webHandler);
         webServer.start();
         webServer.join();

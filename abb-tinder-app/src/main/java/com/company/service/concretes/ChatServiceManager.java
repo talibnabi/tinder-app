@@ -1,7 +1,7 @@
 package com.company.service.concretes;
 
 import com.company.model.Message;
-import com.company.service.abstracts.MessageService;
+import com.company.service.abstracts.ChatService;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 import static com.company.constants.service.ServiceLayerConstants.messageDAOManager;
 
-public class MessageServiceManager implements MessageService {
+public class ChatServiceManager implements ChatService {
 
     @Override
     public void insertMessage(int _from, int _to, String messageMaintenance, long time) {

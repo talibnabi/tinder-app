@@ -41,10 +41,10 @@
                 <div class="card-header msg_head">
                     <div class="d-flex bd-highlight combinedHeader">
                         <div class="img_cont">
-                            <img src=${receiverPic.picURL} class="rounded-circle user_img">
+                            <img src=${receiverPic.picURL} alt="photo" class="float-left">
                         </div>
                         <div class="user_info">
-                            <span>CHAT WITH---> ${receiverPic.name} </span>
+                            <span>CHAT WITH---> ${receiverPic.name}  ${receiverPic.surname} </span>
                         </div>
                     </div>
                 </div>
@@ -66,8 +66,8 @@
                                 </div>
                                 <div class="msg_cotainer">
                                     ${message.messageMaintenance}
-                                    <span class="msg_time"
-                                          style="width: 100px; text-align: left">${message.dateString}</span>
+<#--                                    <span class="msg_time"-->
+<#--                                          style="width: 100px; text-align: left">${message.dateString}</span>-->
                                 </div>
                             </div>
                         </#if>

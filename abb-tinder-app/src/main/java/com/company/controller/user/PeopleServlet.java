@@ -26,6 +26,7 @@ public class PeopleServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         int id = Cookies.getIdFromCookies(req);
+        System.out.println(id);
         List<User> toLike = LikedUserFindManager.getUser(id);
         HashMap<String, Object> data = new HashMap<>();
         data.put("likedPeople", toLike);
