@@ -40,8 +40,8 @@
                 <div class="panel panel-default user_panel">
                     <div class="panel-heading">
                         <h3 class="panel-title"
-                            style="text-align: center; font-size: 24px; -webkit-text-stroke: 1px #ffffff; color: #332e2e">
-                            User List</h3>
+                            style="text-align: center; font-size: 24px; -webkit-text-stroke: 1px #b01b1b; color: #332e2e">
+                            USER LIST</h3>
                     </div>
                     <div class="panel-body">
                         <div class="table-container">

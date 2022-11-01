@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="/template/webfiles/images/logo.png" type="image/png">
-    <title>MatchMe Here</title>
+    <title>ESSENTIAL PAGE</title>
 
     <link rel="stylesheet" href="/template/webfiles/css/bootstrap.css">
     <link rel="stylesheet" href="/template/webfiles/vendors/linericon/style.css">

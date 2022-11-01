@@ -66,8 +66,6 @@
                                 </div>
                                 <div class="msg_cotainer">
                                     ${message.messageMaintenance}
-<#--                                    <span class="msg_time"-->
-<#--                                          style="width: 100px; text-align: left">${message.dateString}</span>-->
                                 </div>
                             </div>
                         </#if>

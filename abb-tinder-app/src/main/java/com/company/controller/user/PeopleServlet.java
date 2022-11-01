@@ -37,6 +37,6 @@ public class PeopleServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String email = req.getParameter("email");
         int id = userServiceManager.findUserIdByEmail(email);
-        resp.sendRedirect("/chat/" + id);
+        resp.sendRedirect("/message/" + id);
     }
 }
