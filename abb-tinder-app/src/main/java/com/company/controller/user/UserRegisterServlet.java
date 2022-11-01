@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import com.company.service.concretes.UserServiceManager;
+import lombok.SneakyThrows;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -30,8 +31,9 @@ public class UserRegisterServlet extends HttpServlet {
         }
     }
 
+    @SneakyThrows
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp){
         String name = req.getParameter("name");
         String surname = req.getParameter("surname");
         String email = req.getParameter("email");

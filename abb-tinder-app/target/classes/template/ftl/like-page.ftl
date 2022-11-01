@@ -40,14 +40,14 @@
                                 <div class="col-12">
                                     <button type="submit" name="like" value='true'
                                             class="btn btn-outline-success btn-block"><span
-                                                class="fa fa-heart"></span> Like
+                                                class="fa fa-heart"></span> LIKE
                                     </button>
                                 </div>
                                 <br>
                                 <div class="col-12" style="padding-bottom: 30px">
                                     <button type="submit" name="like" value='false'
                                             class="btn btn-outline-danger btn-block"><span
-                                                class="fa fa-times"></span> Dislike
+                                                class="fa fa-times"></span> DISLIKE
                                     </button>
                                 </div>
                             </ul>

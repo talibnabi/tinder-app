@@ -9,22 +9,22 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import com.company.model.User;
 import com.company.service.concretes.UserServiceManager;
-
-import java.io.IOException;
+import lombok.SneakyThrows;
 import java.util.HashMap;
 import java.util.List;
 
 @WebServlet
 public class PeopleServlet extends HttpServlet {
     private final FreemarkerTemplateConfigurer configurer;
-    private UserServiceManager userServiceManager;
+    private final   UserServiceManager userServiceManager=new UserServiceManager();
 
     public PeopleServlet(FreemarkerTemplateConfigurer freemarkerTemplateConfigurer) {
         this.configurer = freemarkerTemplateConfigurer;
     }
 
+    @SneakyThrows
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp){
         int id = Cookies.getIdFromCookies(req);
         System.out.println(id);
         List<User> toLike = LikedUserFindManager.getUser(id);
@@ -33,10 +33,11 @@ public class PeopleServlet extends HttpServlet {
         configurer.render("people-list.ftl", data, resp);
     }
 
+    @SneakyThrows
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp){
         String email = req.getParameter("email");
         int id = userServiceManager.findUserIdByEmail(email);
-        resp.sendRedirect("/message/" + id);
+        resp.sendRedirect("/chat/" + id);
     }
 }

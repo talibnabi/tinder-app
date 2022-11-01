@@ -22,12 +22,12 @@
     <div class="newrow">
         <div class="newcolumn">
             <button type="button" class="btn btn-outline-warning btn-block"
-                    onclick="window.location.href = '/like';"> Matching Page
+                    onclick="window.location.href = '/like';"> LIKE PAGE
             </button>
         </div>
         <div class="newcolumn">
             <button type="button" class="btn btn-outline-warning btn-block"
-                    onclick="window.location.href = '/logout';"> Logout
+                    onclick="window.location.href = '/logout';"> LOGOUT
             </button>
         </div>
     </div>
@@ -67,17 +67,6 @@
                                             <button type="submit" name="email" value='${user.email}'
                                                     class="btn btn-outline-warning btn-block">Chat
                                             </button>
-                                        </td>
-                                    </tr>
-
-                                    <tr onclick="location.href='/chat/${user.getId()}'" class="bg-danger">
-                                        <td>
-                                            <div class="avatar-img">
-                                                <img class="img-circle" src="${user.getName()}"/>
-                                            </div>
-                                        </td>
-                                        <td class="align-middle">
-                                            ${user.getUsername()}
                                         </td>
                                     </tr>
                                 </#list>

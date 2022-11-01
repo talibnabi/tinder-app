@@ -69,17 +69,6 @@
                                             </button>
                                         </td>
                                     </tr>
-
-                                    <tr onclick="location.href='/chat/${user.getId()}'" class="bg-danger">
-                                        <td>
-                                            <div class="avatar-img">
-                                                <img class="img-circle" src="${user.getName()}"/>
-                                            </div>
-                                        </td>
-                                        <td class="align-middle">
-                                            ${user.getUsername()}
-                                        </td>
-                                    </tr>
                                 </#list>
                                 </tbody>
                             </table>

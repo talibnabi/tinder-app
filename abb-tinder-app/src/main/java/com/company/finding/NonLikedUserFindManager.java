@@ -19,7 +19,7 @@ public class NonLikedUserFindManager {
                 .filter(idX -> !likeServiceManager.getAllSigned(id).stream()
                         .map(Like::getTo)
                         .collect(Collectors.toSet())
-                        .contains(id))
+                        .contains(idX))
                 .collect(Collectors.toList());
     }
 

@@ -9,8 +9,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import com.company.model.User;
 import com.company.service.concretes.ChatServiceManager;
 import com.company.service.concretes.UserServiceManager;
+import lombok.SneakyThrows;
 
-import java.io.IOException;
 import java.sql.SQLException;
 import java.util.HashMap;
 
@@ -27,7 +27,8 @@ public class ChatServlet extends HttpServlet {
         this.configurer = configurer;
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    @SneakyThrows
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)  {
         cookiesToID = Cookies.getIdFromCookies(request);
         System.out.println("cookies id: "+cookiesToID);
         String path=request.getPathInfo().replace("/", "");
@@ -47,7 +48,8 @@ public class ChatServlet extends HttpServlet {
         configurer.render("chat.ftl", data, response);
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    @SneakyThrows
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)  {
         pathID = Integer.parseInt(request.getPathInfo().replace("/", ""));
         String text = request.getParameter("message");
         cookiesToID = Cookies.getIdFromCookies(request);

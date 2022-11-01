@@ -19,7 +19,7 @@ public class LikedUserFindManager  {
                 .filter(idX -> likeServiceManager.getAllLikedUser(id).stream()
                         .map(Like::getTo)
                         .collect(Collectors.toSet())
-                        .contains(id))
+                        .contains(idX))
                 .map(userServiceManager::getUserByID)
                 .collect(Collectors.toList());
     }

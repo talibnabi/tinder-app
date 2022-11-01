@@ -10,8 +10,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import com.company.model.User;
 import com.company.service.concretes.LikeServiceManager;
 import com.company.service.concretes.UserServiceManager;
+import lombok.SneakyThrows;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 
@@ -32,8 +32,9 @@ public class LikeServlet extends HttpServlet {
         likeServiceManager = new LikeServiceManager();
     }
 
+    @SneakyThrows
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)  {
         id = Cookies.getIdFromCookies(request);
         userList = NonLikedUserFindManager.getUser(id);
         likedPersonID = userList.get(0);
@@ -44,8 +45,9 @@ public class LikeServlet extends HttpServlet {
         userList.remove(0);
     }
 
+    @SneakyThrows
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp){
         id = Cookies.getIdFromCookies(req);
         userList = NonLikedUserFindManager.getUser(id);
         boolean likeBoolean = Boolean.parseBoolean(req.getParameter("like"));

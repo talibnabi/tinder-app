@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import com.company.service.concretes.UserServiceManager;
+import lombok.SneakyThrows;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -19,6 +20,7 @@ import static com.company.util.DBOperation.getUserIdByEmailFromDB;
 @WebServlet
 public class UserLoginServlet extends HttpServlet {
 
+    @SneakyThrows
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
         Path path = Paths.get(ControllerLayerConstants.userLoginServletPath);
@@ -31,8 +33,9 @@ public class UserLoginServlet extends HttpServlet {
         }
     }
 
+    @SneakyThrows
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp){
         String email = req.getParameter("email");
         UserServiceManager userServiceManager = new UserServiceManager();
         int uid = getUserIdByEmailFromDB(email, userServiceManager);
