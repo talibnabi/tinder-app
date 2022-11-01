@@ -22,12 +22,12 @@
     <div class="newrow">
         <div class="newcolumn">
             <button type="button" class="btn btn-outline-warning btn-block"
-                    onclick="window.location.href = '/like';"> Matching Page
+                    onclick="window.location.href = '/like';"> LIKE PAGE
             </button>
         </div>
         <div class="newcolumn">
             <button type="button" class="btn btn-outline-warning btn-block"
-                    onclick="window.location.href = '/logout';"> Logout
+                    onclick="window.location.href = '/logout';"> LOGOUT
             </button>
         </div>
     </div>

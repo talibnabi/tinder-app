@@ -18,12 +18,12 @@
     <div class="newrow">
         <div class="newcolumn">
             <button type="button" class="btn btn-outline-warning btn-block"
-                    onclick="window.location.href = '/list/';"> LIKED USERS
+                    onclick="window.location.href = '/list/';"> USERS
             </button>
         </div>
         <div class="newcolumn">
             <button type="button" class="btn btn-outline-warning btn-block"
-                    onclick="window.location.href = '/like';"> ESSENTIAL PAGE
+                    onclick="window.location.href = '/like';"> LIKE PAGE
             </button>
         </div>
         <div class="newcolumn">
