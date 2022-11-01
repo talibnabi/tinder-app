@@ -4,13 +4,13 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" href="/webstock/webfiles/images/logo.png" type="image/png">
+    <link rel="icon" href="/template/webfiles/images/logo.png" type="image/png">
     <title>MatchMe Here</title>
 
-    <link rel="stylesheet" href="/webstock/webfiles/css/bootstrap.css">
-    <link rel="stylesheet" href="/webstock/webfiles/vendors/linericon/style.css">
-    <link rel="stylesheet" href="/webstock/webfiles/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/webstock/webfiles/css/styler.css">
+    <link rel="stylesheet" href="/template/webfiles/css/bootstrap.css">
+    <link rel="stylesheet" href="/template/webfiles/vendors/linericon/style.css">
+    <link rel="stylesheet" href="/template/webfiles/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/template/webfiles/css/styler.css">
 
 </head>
 <body>

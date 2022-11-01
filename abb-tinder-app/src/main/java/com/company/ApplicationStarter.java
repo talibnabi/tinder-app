@@ -32,7 +32,7 @@ public class ApplicationStarter {
         webHandler.addServlet(new ServletHolder(new UserLogoutServlet()), "/logout/*");
         webHandler.addServlet(new ServletHolder(new UserRegisterServlet()), "/register/*");
         webHandler.addServlet(new ServletHolder(new RedirectServlet("/login")), "/*");
-        webHandler.addServlet(new ServletHolder(new PathServlet()), "/webstock/*");
+        webHandler.addServlet(new ServletHolder(new PathServlet()), "/template/*");
         webHandler.addFilter(UserRegisterFilter.class, "/register/*", EnumSet.of(DispatcherType.REQUEST));
         webHandler.addFilter(UserLoginFilter.class, "/login/*", EnumSet.of(DispatcherType.REQUEST));
         webHandler.addFilter(LoginFilterWithCookies.class, "/login/*", EnumSet.of(DispatcherType.REQUEST));
